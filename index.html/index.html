@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elegant Best Friend Website</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f9f6f2;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('pexels-suneo1999-24143-103572.jpg') center center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 0.5s;
+    }
+
+    .hero-content h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      margin-bottom: 30px;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    }
+
+    .btn {
+      background-color: #d4a5a5;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(212,165,165,0.6);
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #b87f7f;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: #b87f7f;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeIn 2.5s forwards;
+      animation-delay: 1s;
+    }
+
+    .gallery img {
+      width: 280px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 8px 15px rgba(184,127,127,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(184,127,127,0.7);
+    }
+
+    .dedication {
+      background-color: #f3e8e8;
+      border-radius: 20px;
+      padding: 30px 20px;
+      font-style: italic;
+      font-size: 1.3rem;
+      color: #6b4c4c;
+      box-shadow: 0 4px 10px rgba(184,127,127,0.3);
+      max-width: 700px;
+      margin: 40px auto;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 3s forwards;
+      animation-delay: 1.5s;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #b87f7f;
+      border-top: 1px solid #d4a5a5;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #b87f7f;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #7f5a5a;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+      .hero-content p {
+        font-size: 1.1rem;
+      }
+      .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+      }
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+      .gallery img {
+        width: 90vw;
+        height: auto;
+        max-width: 350px;
+      }
+      .dedication {
+        font-size: 1.1rem;
+        padding: 20px 15px;
+        max-width: 90vw;
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>To My Best Friend</h1>
+      <p>You are truly special and cherished. This website is dedicated to you.</p>
+      <a href="#gallery" class="btn">View Photos</a>
+    </div>
+  </section>
+  <main>
+    <h2 id="gallery" class="section-title">Photo Gallery</h2>
+    <div class="gallery">
+      <img src="cia 1.jpg" alt="Photo 1" />
+      <img src="cia 2.jpg" alt="Photo 2" />
+    </div>
+    <section class="dedication">
+      <p>"To my dearest friend, thank you for always being there. Your kindness and laughter brighten my days."</p>
+      <p>"Stay who you are, because all I see is you. So stay who you are in front of me okay? You're so beautiful by the way haha."</p>
+    </section>
+  </main>
+  <footer>
+    <p>Connect with her on 
+      <a href="#" target="@eseecco" rel="noopener noreferrer">Instagram</a> | 
+      <a href="#" target="@twungm" rel="noopener noreferrer">Tiktok</a>
+    </p>
+  </footer>
+</body>
+</html>
+
+
